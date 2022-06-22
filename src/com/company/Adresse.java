@@ -9,6 +9,8 @@ public class Adresse {
     private String ville;
     private String pays;
 
+    public Adresse(){}
+
     public Adresse(String avenue, String numero, String cellule, String quartier, String commune, String ville, String pays) {
         this.avenue = avenue;
         this.numero = numero;
@@ -73,5 +75,17 @@ public class Adresse {
 
     public void setPays(String pays) {
         this.pays = pays;
+    }
+
+    @Override
+    public String toString() {
+        return "{\n" +
+                "avenue = " + avenue + '\n' +
+                " numero = " + numero + '\n' +
+                " cellule = " + cellule + '\n' +
+                " quartier = " + quartier + '\n' +
+                " commune = " + commune + '\n' +
+                " ville = " + ville + '\n' +
+                " pays = " + pays + " }";
     }
 }
