@@ -1,6 +1,8 @@
 package com.company;
 
-public class Adresse {
+import com.company.data.Fichier;
+
+public class Adresse extends Fichier {
     private String avenue;
     private String numero;
     private String cellule;
@@ -12,6 +14,7 @@ public class Adresse {
     public Adresse(){}
 
     public Adresse(String avenue, String numero, String cellule, String quartier, String commune, String ville, String pays) {
+        super("src/com/company/adresse.txt");
         this.avenue = avenue;
         this.numero = numero;
         this.cellule = cellule;
@@ -75,6 +78,17 @@ public class Adresse {
 
     public void setPays(String pays) {
         this.pays = pays;
+    }
+
+    @Override
+    public void ecrire(String phrase) {
+        super.ecrire("av/" + avenue + ", N/" + numero + ", cellule/" + cellule + ", quartier/" + quartier + ", commune/" +
+                commune + ", Ville/" + ville + ", pays/" + pays);
+    }
+
+    @Override
+    public void lire() {
+        super.lire();
     }
 
     @Override

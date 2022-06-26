@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Devis extends DocumentCommercial {
     @Override
-    public Double getTotal() {
+    public double getTotal() {
         double total = 0;
         Detail detail = getDetail();
         List<Ligne> l = detail.getLignes();
@@ -15,7 +15,7 @@ public class Devis extends DocumentCommercial {
     }
 
     @Override
-    public Double getTva() {
+    public double getTva() {
         return (getTotal()*16) / 100;
     }
 }

@@ -5,8 +5,8 @@ public abstract class DocumentCommercial {
     private  Client client;
     private Detail detail;
 
-    public abstract Double getTotal();
-    public abstract Double getTva();
+    public abstract double getTotal();
+    public abstract double getTva();
 
     public Long getNumero() {
         return numero;

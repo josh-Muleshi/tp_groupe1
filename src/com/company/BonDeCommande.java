@@ -4,8 +4,8 @@ import java.util.List;
 
 public class BonDeCommande extends DocumentCommercial {
     @Override
-    public Double getTotal() {
-        double total = 0;
+    public double getTotal() {
+        double total = 0.0;
         Detail detail = getDetail();
         List<Ligne> l = detail.getLignes();
         for (Ligne s: l) {
@@ -15,7 +15,7 @@ public class BonDeCommande extends DocumentCommercial {
     }
 
     @Override
-    public Double getTva() {
+    public double getTva() {
         return (getTotal()*16) / 100;
     }
 }
