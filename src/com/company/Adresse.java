@@ -3,6 +3,8 @@ package com.company;
 import com.company.data.Fichier;
 
 public class Adresse extends Fichier {
+
+    private int id;
     private String avenue;
     private String numero;
     private String cellule;
@@ -14,7 +16,7 @@ public class Adresse extends Fichier {
     public Adresse(){}
 
     public Adresse(String avenue, String numero, String cellule, String quartier, String commune, String ville, String pays) {
-        super("src/com/company/adresse.txt");
+        super("src/com/company/db/adresse.txt");
         this.avenue = avenue;
         this.numero = numero;
         this.cellule = cellule;
@@ -82,8 +84,9 @@ public class Adresse extends Fichier {
 
     @Override
     public void ecrire(String phrase) {
-        super.ecrire("av/" + avenue + ", N/" + numero + ", cellule/" + cellule + ", quartier/" + quartier + ", commune/" +
-                commune + ", Ville/" + ville + ", pays/" + pays);
+        super.ecrire(getLastLineId()+1 + " : av/" + avenue + ", N/" + numero + ", cellule/" + cellule + ", quartier/" + quartier + ", commune/" +
+                    commune + ", Ville/" + ville + ", pays/" + pays + "\n");
+
     }
 
     @Override

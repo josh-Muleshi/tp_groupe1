@@ -1,16 +1,24 @@
 package com.company;
 
 import com.company.Adresse;
+import com.company.data.Fichier;
 
-public abstract class Personne {
+public abstract class Personne extends Fichier {
+
+    private int id;
     private String nom;
     private String prenom;
     private Adresse adresse;
 
     public Personne(String nom, String prenom, Adresse adresse) {
+        super("src/com/company/db/client.txt");
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
+    }
+
+    public int getId() {
+        return getLastLineId()+1;
     }
 
     public String getNom() {
@@ -35,6 +43,16 @@ public abstract class Personne {
 
     public void setAdresse(Adresse adresse) {
         this.adresse = adresse;
+    }
+
+    @Override
+    public void ecrire(String phrase) {
+        super.ecrire("id "  + adresse.getLastLineId() + " : nom : " + nom + ", prenom/" + prenom + ", Adresse/" + adresse.getLastLineId() + "\n");
+    }
+
+    @Override
+    public void lire() {
+        super.lire();
     }
 
     @Override

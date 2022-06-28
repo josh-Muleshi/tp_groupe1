@@ -1,8 +1,10 @@
 package com.company;
 
+import com.company.data.Fichier;
+
 import java.util.Date;
 
-public class Produit<T> {
+public class Produit<T> extends Fichier {
     private String code;
     private String dessignation;
     private Double prix;
@@ -11,6 +13,7 @@ public class Produit<T> {
     private Categorie categorie;
 
     public Produit(String code, String dessignation, Double prix, T uniteMessure, Date dateExpiration, Categorie categorie) {
+        super("src/com/company/db/produit.txt");
         this.code = code;
         this.dessignation = dessignation;
         this.prix = prix;
@@ -67,6 +70,17 @@ public class Produit<T> {
         this.categorie = categorie;
     }
 
+    @Override
+    public void ecrire(String phrase) {
+        super.ecrire( categorie.getLastLineId() + " , code : " + code + ", designation : " + dessignation
+                + "prix : " + prix + ", uniteMessure : " + uniteMessure + ", dateExpiration : " + dateExpiration + "categorie : " +
+                categorie.getLastLineId() + "\n");
+    }
+
+    @Override
+    public void lire() {
+        super.lire();
+    }
     @Override
     public String toString() {
         return "{ \n\t\t" +

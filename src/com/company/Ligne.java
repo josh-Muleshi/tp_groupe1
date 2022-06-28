@@ -1,11 +1,14 @@
 package com.company;
 
-public class Ligne {
+import com.company.data.Fichier;
+
+public class Ligne extends Fichier {
     private int numero;
     private int quantite;
     private Produit produit;
 
     public Ligne(int numero, int quantite, Produit produit) {
+        super("src/com/company/db/lignes.txt");
         this.numero = numero;
         this.quantite = quantite;
         this.produit = produit;
@@ -37,6 +40,17 @@ public class Ligne {
 
     public void setProduit(Produit produit) {
         this.produit = produit;
+    }
+
+    @Override
+    public void ecrire(String phrase) {
+        super.ecrire( produit.getLastLineId() + " , Numero : " + numero + ", designation : " + quantite
+                + "produit : " + produit.getLastLineId() + "\n");
+    }
+
+    @Override
+    public void lire() {
+        super.lire();
     }
 
     @Override

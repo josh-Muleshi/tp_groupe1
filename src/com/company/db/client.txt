@@ -1,1 +1,5 @@
-josh muleshi
+
+id 1 : nom : josh, prenom/mul, Adresse/1
+id 2 : nom : josh, prenom/muteba, Adresse/2
+id 3 : nom : paul, prenom/kab, Adresse/3
+id 4 : nom : dav, prenom/mul, Adresse/4

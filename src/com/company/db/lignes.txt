@@ -1,0 +1,2 @@
+3 , Numero : 5, designation : 6produit : 3
+4 , Numero : 2, designation : 1produit : 4

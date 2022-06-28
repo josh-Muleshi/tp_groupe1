@@ -1,0 +1,5 @@
+
+1 : av/k, N/5, cellule/d, quartier/d, commune/d, Ville/d, pays/d
+2 : av/kaf, N/5, cellule/kaf, quartier/cdj, commune/kamp, Ville/lub, pays/cong
+3 : av/h, N/8, cellule/lub, quartier/kaf, commune/kam, Ville/lish, pays/c
+4 : av/h, N/5, cellule/l, quartier/j, commune/i, Ville/h, pays/k

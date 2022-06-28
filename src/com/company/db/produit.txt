@@ -1,0 +1,4 @@
+1 , code : d, designation : dprix : 5.6, uniteMessure : d, dateExpiration : Thu Jan 01 02:00:02 CAT 1970categorie : 1
+2 , code : 45fg, designation : tilapiaprix : 5.6, uniteMessure : kg, dateExpiration : Thu Jan 01 02:00:02 CAT 1970categorie : 2
+3 , code : 4ds, designation : pprix : 6.0, uniteMessure : k, dateExpiration : Thu Jan 01 02:00:02 CAT 1970categorie : 3
+4 , code : k, designation : kprix : 5.0, uniteMessure : lit, dateExpiration : Thu Jan 01 02:00:02 CAT 1970categorie : 4

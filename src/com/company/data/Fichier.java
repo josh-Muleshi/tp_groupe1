@@ -1,14 +1,16 @@
 package com.company.data;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class Fichier {
     private String chemin;
     private File file;
+
+    BufferedReader br;
 
     public Fichier(){}
 
@@ -54,12 +56,45 @@ public abstract class Fichier {
         }
     }
 
+    public boolean isEmpty;
+
     public String getChemin() {
         return chemin;
     }
 
     public void setChemin(String chemin) {
         this.chemin = chemin;
+    }
+
+    public int getLastLineId() {
+        String lastLine = "";
+        int id = 0;
+        try {
+            String sCurrentLine;
+
+            BufferedReader br = new BufferedReader(new FileReader(chemin));
+            while ((sCurrentLine = br.readLine()) != null)
+            {
+                System.out.println(sCurrentLine);
+                lastLine = sCurrentLine;
+            }
+            if (!lastLine.equals("")){
+                String[] tabLines = lastLine.split(" ");
+                id = Integer.parseInt(tabLines[0]);
+                isEmpty = false;
+            }else {
+                isEmpty = true;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (br != null)br.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return id;
     }
 
     @Override
