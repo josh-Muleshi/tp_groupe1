@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Logic;
 
 import com.company.data.Fichier;
 
@@ -11,6 +11,8 @@ public class Produit<T> extends Fichier {
     private T uniteMessure;
     private Date dateExpiration;
     private Categorie categorie;
+
+    public Produit(){}
 
     public Produit(String code, String dessignation, Double prix, T uniteMessure, Date dateExpiration, Categorie categorie) {
         super("src/com/company/db/produit.txt");

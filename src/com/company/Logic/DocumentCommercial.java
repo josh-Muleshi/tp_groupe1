@@ -1,9 +1,15 @@
-package com.company;
+package com.company.Logic;
 
-public abstract class DocumentCommercial {
+import com.company.data.Fichier;
+
+public abstract class DocumentCommercial extends Fichier {
     private Long numero;
     private  Client client;
     private Detail detail;
+
+    public DocumentCommercial(){
+        super("src/com/company/db/facture.txt");
+    }
 
     public abstract double getTotal();
     public abstract double getTva();
@@ -30,6 +36,16 @@ public abstract class DocumentCommercial {
 
     public void setDetail(Detail detail) {
         this.detail = detail;
+    }
+
+    @Override
+    public void ecrire(String phrase) {
+        super.ecrire( client.getLastLineId() + " , numero" + numero + " , clien" + client.getLastLineId() + " , detail" + detail.getLastLineId() + "\n");
+    }
+
+    @Override
+    public void lire() {
+        super.lire();
     }
 
     @Override

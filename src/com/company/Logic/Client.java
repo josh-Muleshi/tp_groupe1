@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Logic;
 
 public class Client extends Personne {
     private String numero;

@@ -1,8 +1,10 @@
-package com.company;
+package com.company.facture;
 
-import com.company.data.Fichier;
+import com.company.Logic.*;
 
 import java.util.*;
+
+import static com.company.facture.FactureScreen.createFactWindow;
 
 /**
  * GL(SI)
@@ -26,6 +28,7 @@ public class Main {
 
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
+        createFactWindow();
         Random random = new Random();
 
         System.out.println("------------- Facture ---------------");
@@ -95,7 +98,8 @@ public class Main {
         facture1.setDetail(detailFunc(lignes));
         facture1.getTotal();
         facture1.getTva();
-
+        facture1.ecrire("");
+        facture1.lire();
         return facture1;
     }
     private static Client clientFunc(String nom, String prenom, Adresse adresse){

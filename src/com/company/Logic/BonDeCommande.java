@@ -1,11 +1,11 @@
-package com.company;
+package com.company.Logic;
 
 import java.util.List;
 
-public class Devis extends DocumentCommercial {
+public class BonDeCommande extends DocumentCommercial {
     @Override
     public double getTotal() {
-        double total = 0;
+        double total = 0.0;
         Detail detail = getDetail();
         List<Ligne> l = detail.getLignes();
         for (Ligne s: l) {

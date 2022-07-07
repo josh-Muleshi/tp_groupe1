@@ -1,6 +1,5 @@
-package com.company;
+package com.company.Logic;
 
-import com.company.Adresse;
 import com.company.data.Fichier;
 
 public abstract class Personne extends Fichier {
@@ -47,7 +46,7 @@ public abstract class Personne extends Fichier {
 
     @Override
     public void ecrire(String phrase) {
-        super.ecrire("id "  + adresse.getLastLineId() + " : nom : " + nom + ", prenom/" + prenom + ", Adresse/" + adresse.getLastLineId() + "\n");
+        super.ecrire(adresse.getLastLineId() + " : nom : " + nom + ", prenom/" + prenom + ", Adresse/" + adresse.getLastLineId() + "\n");
     }
 
     @Override

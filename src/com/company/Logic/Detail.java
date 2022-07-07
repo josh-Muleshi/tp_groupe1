@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Logic;
 
 import com.company.data.Fichier;
 
@@ -21,7 +21,10 @@ public class Detail extends Fichier {
 
     @Override
     public void ecrire(String phrase) {
-        super.ecrire( "lignes : " + lignes + "\n");
+//        lignes.forEach(ligne -> {
+//            super.ecrire( ligne.getLastLineId() + " , lignes : " + ligne.getLastLineId() + "\n");
+//        });
+
     }
 
     @Override
