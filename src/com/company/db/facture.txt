@@ -1,0 +1,2 @@
+1 , numero2597498150173743477 , clien1 , detail0
+2 , numero7147670729396264145 , clien2 , detail0
